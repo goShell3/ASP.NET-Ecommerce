@@ -1,19 +1,17 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Ecommerce.Application.Common.Interfaces.Authentication;
 using Microsoft.IdentityModel.Tokens;
-using 
-
 
 namespace Ecommerce.Infrastructure.Services;
 
 public class JwtTokenGenerator : IJwtTokenGenerator {
     public string GenerateToken(Guid userId, string firstName, string lastName) {
-        // Implement JWT token generation logic here
 
     var signingCredentials = new SigningCredentials(
         new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes("Super-private-key")),
+            Encoding.UTF8.GetBytes("super-private-key")),
         SecurityAlgorithms.HmacSha256
     );
 

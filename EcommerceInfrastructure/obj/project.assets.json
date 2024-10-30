@@ -113,6 +113,30 @@
             "related": ".xml"
           }
         }
+      },
+      "EcommerceApplication/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "EcommerceDomain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
+        },
+        "compile": {
+          "bin/placeholder/EcommerceApplication.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EcommerceApplication.dll": {}
+        }
+      },
+      "EcommerceDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EcommerceDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EcommerceDomain.dll": {}
+        }
       }
     }
   },
@@ -294,10 +318,21 @@
         "system.identitymodel.tokens.jwt.8.1.2.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
+    },
+    "EcommerceApplication/1.0.0": {
+      "type": "project",
+      "path": "../EcommerceApplication/EcommerceApplication.csproj",
+      "msbuildProject": "../EcommerceApplication/EcommerceApplication.csproj"
+    },
+    "EcommerceDomain/1.0.0": {
+      "type": "project",
+      "path": "../EcommerceDomain/EcommerceDomain.csproj",
+      "msbuildProject": "../EcommerceDomain/EcommerceDomain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EcommerceApplication >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.2",
       "System.IdentityModel.Tokens.Jwt >= 8.1.2"
     ]
@@ -334,7 +369,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\CodeFiles\\C#CODES\\Ecommerce\\EcommerceApplication\\EcommerceApplication.csproj": {
+              "projectPath": "D:\\CodeFiles\\C#CODES\\Ecommerce\\EcommerceApplication\\EcommerceApplication.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

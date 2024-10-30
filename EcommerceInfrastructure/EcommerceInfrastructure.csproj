@@ -12,5 +12,10 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.1.2" />
   </ItemGroup>
+    
+
+  <ItemGroup>
+    <ProjectReference Include="..\EcommerceApplication\EcommerceApplication.csproj" />
+  </ItemGroup>
 
 </Project>
