@@ -1,0 +1,11 @@
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\bin\Debug\net8.0\EcommerceConstructs.deps.json
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\bin\Debug\net8.0\EcommerceConstructs.dll
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\bin\Debug\net8.0\EcommerceConstructs.pdb
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.GeneratedMSBuildEditorConfig.editorconfig
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.AssemblyInfoInputs.cache
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.AssemblyInfo.cs
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.csproj.CoreCompileInputs.cache
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.dll
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\refint\EcommerceConstructs.dll
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.pdb
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\ref\EcommerceConstructs.dll
