@@ -3,25 +3,24 @@ using Ecommerce.Application.Common.Interfaces.Persistence;
 
 namespace Ecommerce.Application.Services.Authenticaton;
 
-public class AuthenticationController : IAuthenticationService
+public class AuthenticationService : IAuthenticationService
 {
 
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserRepository _userRepository;
 
-    public AuthenticationController(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository)
+    public AuthenticationService(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository)
     {
         _jwtTokenGenerator = jwtTokenGenerator;
         _userRepository = userRepository;
     }
 
      public AuthnticationResult Register(string firstName, string lastName, string email, string password)
-   {
-    // check if user exists
+    {
+
     if(_userRepository.GetUserByEmail(email) is not null) {
         throw new Exception("User already registered");
     }
-    // check if token is valid
 
     var user = new User (
         Guid.NewGuid(),
@@ -34,8 +33,6 @@ public class AuthenticationController : IAuthenticationService
 
     _userRepository.AddUser(user);
 
-    // generate JWT token
-
     var token = _jwtTokenGenerator.GenerateToken(user.Id, firstName, lastName);
 
     return new AuthnticationResult(
@@ -47,7 +44,7 @@ public class AuthenticationController : IAuthenticationService
      );
    }
 
-    public AuthnticationResult Login(string email, string token, string password)
+    public AuthnticationResult Login(string email, string password)
     {
         if (_userRepository.GetUserByEmail(email) is not User user)
         {
@@ -69,4 +66,10 @@ public class AuthenticationController : IAuthenticationService
             email,
             token);
     }
+
+    public AuthnticationResult Login(string email, string token, string password)
+    {
+        throw new NotImplementedException();
+    }
 }
+

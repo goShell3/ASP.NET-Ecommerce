@@ -11,7 +11,7 @@ public class JwtTokenGenerator : IJwtTokenGenerator {
 
     var signingCredentials = new SigningCredentials(
         new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes("super-private-key")),
+            Encoding.UTF8.GetBytes("123456783456765439876543123456789")),
         SecurityAlgorithms.HmacSha256
     );
 

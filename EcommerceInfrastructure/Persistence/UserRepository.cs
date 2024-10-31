@@ -1,23 +1,18 @@
-using System.Reflection.Metadata;
 using Ecommerce.Application.Common.Interfaces.Persistence;
 
 namespace Ecommerce.Infrastructure;
 
-public class userRepository : IUserRepository{
+public class UserRepository : IUserRepository{
 
-    private readonly List<User> _users = new();
+    private static readonly List<User> _users = new();
 
     public void AddUser(User user)
     {
         _users.Add(user);
     }
 
-    public User? GetByUserEmail (int id) {
-        throw new NotImplementedException();
-    }
-
     public User? GetUserByEmail(string email)
     {
-        throw new NotImplementedException();
+        return _users.SingleOrDefault(u => u.Email == email);
     }
 }

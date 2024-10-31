@@ -7,8 +7,9 @@ using LoginRequest = Ecommerce.Constructs.Authentication.LoginRequest;
 
 namespace Ecommerce.Api.Controllers
 {
+
     [ApiController]
-    [Route("auth")]
+    [Route("auth/[controller]/[action]")]
     public class AuthenticationController : ControllerBase 
     {
         private readonly IAuthenticationService _authenticationService;
@@ -18,7 +19,7 @@ namespace Ecommerce.Api.Controllers
             _authenticationService = authenticationService;
         }
 
-        [HttpPost("register")]
+        [HttpPost]
         public IActionResult Register(RegisterRequest request) 
         {
 
@@ -39,7 +40,7 @@ namespace Ecommerce.Api.Controllers
             return Ok(response);
         }
 
-        [HttpPost("login")]
+        [HttpPost]
         public IActionResult Login(LoginRequest request) 
         {
             if (!ModelState.IsValid) 

@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "Ecommerce.Api.Controllers.AuthenticationController",
+    "Method": "Login",
+    "RelativePath": "auth/Authentication/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Ecommerce.Constructs.Authentication.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Api.Controllers.AuthenticationController",
+    "Method": "Register",
+    "RelativePath": "auth/Authentication/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Ecommerce.Constructs.Authentication.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

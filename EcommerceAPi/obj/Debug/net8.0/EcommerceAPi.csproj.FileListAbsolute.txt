@@ -46,3 +46,4 @@ D:\CodeFiles\C#CODES\Ecommerce\EcommerceAPi\obj\Debug\net8.0\refint\EcommerceAPi
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceAPi\obj\Debug\net8.0\EcommerceAPi.pdb
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceAPi\obj\Debug\net8.0\EcommerceAPi.genruntimeconfig.cache
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceAPi\obj\Debug\net8.0\ref\EcommerceAPi.dll
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceAPi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
