@@ -1,0 +1,60 @@
+@host = http://localhost:5273
+
+GET {{host}}auth/products/{product}/
+Content-Type: application/json
+
+{
+  "product_id": 123,
+  "name": "Smartphone Model X",
+  "description": "A high-end smartphone with a powerful processor, exceptional display, and long battery life.",
+  "price": 699.99,
+  "currency": "USD",
+  "category": {
+    "id": 1,
+    "name": "Electronics"
+  },
+  "brand": "BrandName",
+  "stock": {
+    "availability": "In Stock",
+    "quantity": 25
+  },
+  "specifications": {
+    "display": "6.5 inch OLED",
+    "processor": "Octa-core 3GHz",
+    "ram": "8GB",
+    "storage": "256GB",
+    "battery": "4500mAh",
+    "camera": {
+      "rear": "48MP + 12MP + 5MP",
+      "front": "12MP"
+    }
+  },
+  "ratings": {
+    "average": 4.5,
+    "reviews_count": 325
+  },
+  "images": [
+    {
+      "url": "https://example.com/images/product1_front.jpg",
+      "alt_text": "Front view of Smartphone Model X"
+    },
+    {
+      "url": "https://example.com/images/product1_back.jpg",
+      "alt_text": "Back view of Smartphone Model X"
+    }
+  ],
+  "related_products": [
+    {
+      "product_id": 124,
+      "name": "Smartphone Model Y",
+      "price": 799.99
+    },
+    {
+      "product_id": 125,
+      "name": "Smartphone Model Z",
+      "price": 899.99
+    }
+  ],
+  "created_at": "2024-10-31T10:00:00Z",
+  "updated_at": "2024-10-31T12:00:00Z"
+}

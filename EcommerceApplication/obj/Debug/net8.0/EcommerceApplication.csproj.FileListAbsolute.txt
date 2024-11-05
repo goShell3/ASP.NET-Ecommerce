@@ -8,6 +8,7 @@ D:\CodeFiles\C#CODES\Ecommerce\EcommerceApplication\obj\Debug\net8.0\EcommerceAp
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceApplication\obj\Debug\net8.0\EcommerceApplication.AssemblyInfoInputs.cache
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceApplication\obj\Debug\net8.0\EcommerceApplication.AssemblyInfo.cs
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceApplication\obj\Debug\net8.0\EcommerceApplication.csproj.CoreCompileInputs.cache
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceApplication\obj\Debug\net8.0\EcommerceApplication.sourcelink.json
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceApplication\obj\Debug\net8.0\Ecommerc.2059BCE1.Up2Date
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceApplication\obj\Debug\net8.0\EcommerceApplication.dll
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceApplication\obj\Debug\net8.0\refint\EcommerceApplication.dll

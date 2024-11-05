@@ -30,5 +30,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ecommerce.Api.Controllers.ProductViewController",
+    "Method": "CreateProducts",
+    "RelativePath": "products/{hostId}/product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Ecommerce.Constructs.Models.CreateProductRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "hostId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

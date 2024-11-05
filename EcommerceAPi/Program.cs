@@ -1,16 +1,26 @@
-using Ecommerce.Application;
 using Ecommerce.Infrastructure;
+using Ecommerce.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 {
     builder.Services
         .AddInfrastructure();
-    
+        // .AddApplication();
+
+    builder.Services.AddDbContext<EcommerceDbContext>(options =>
+    {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    });
+
 
     builder.Services.AddSwaggerGen();
     builder.Services.AddControllers();
 }
+
 var app = builder.Build();
 {
     app.UseSwagger();
@@ -22,19 +32,12 @@ var app = builder.Build();
     }
 
     app.UseHttpsRedirection();
-
     app.UseRouting();
 
     app.UseAuthentication();
 
     app.UseAuthorization();
 
-    app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapControllers();
-    });
+    app.MapControllers();
     app.Run();
 }
-
-
-

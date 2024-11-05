@@ -5,6 +5,7 @@ D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceCon
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.AssemblyInfoInputs.cache
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.AssemblyInfo.cs
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.csproj.CoreCompileInputs.cache
+D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.sourcelink.json
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.dll
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\refint\EcommerceConstructs.dll
 D:\CodeFiles\C#CODES\Ecommerce\EcommerceConstructs\obj\Debug\net8.0\EcommerceConstructs.pdb

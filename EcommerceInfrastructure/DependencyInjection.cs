@@ -16,7 +16,7 @@ public static class DependencyInjection
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
         // services.AddScoped<IAuthenticationService, AuthenticationService>();
 
-        // services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<IProductRepository, ProductRepository>();
         // services.AddScoped<IOrderRepository, OrderRepository>();
         // services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
