@@ -1,5 +1,7 @@
+using Ecommerce.Application.Services;
 using Ecommerce.Infrastructure;
 using Ecommerce.Infrastructure.Data;
+using EcommerceApplication.Interface;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -15,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
     {
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
     });
-
+    builder.Services.AddScoped<IProductService, ProductService>();
 
     builder.Services.AddSwaggerGen();
     builder.Services.AddControllers();

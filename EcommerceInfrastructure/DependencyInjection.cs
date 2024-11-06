@@ -1,7 +1,9 @@
 using Ecommerce.Application.Common.Interfaces;
 using Ecommerce.Application.Common.Interfaces.Authentication;
 using Ecommerce.Application.Common.Interfaces.Persistence;
+using Ecommerce.Application.Interfaces.Repositories;
 using Ecommerce.Application.Services.Authenticaton;
+using Ecommerce.Infrastructure.Persistence.Repositories;
 using Ecommerce.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 // using Microsoft.Extensions.Configuration;
@@ -14,8 +16,6 @@ public static class DependencyInjection
     {
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
-        // services.AddScoped<IAuthenticationService, AuthenticationService>();
-
         services.AddScoped<IProductRepository, ProductRepository>();
         // services.AddScoped<IOrderRepository, OrderRepository>();
         // services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();

@@ -1,5 +1,6 @@
-using Ecommerce.Application.Contracts;
+//using Ecommerce.Application.Contracts;
 using Ecommerce.Application.Services.Authenticaton;
+using EcommerceApplication.Interface;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Ecommerce.Application

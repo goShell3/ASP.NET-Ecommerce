@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using EcommerceDomain.Product.Entities;
 
 namespace Ecommerce.Application.DTOs
 {
@@ -13,6 +14,17 @@ namespace Ecommerce.Application.DTOs
         [Required]
         public string? Description { get; set; }
 
-        public int StockQuantity { get; set; }
+        public string? Currency {get; set;}
+        public Category? category {get; set;}
+        public  string? Brand {get; set;}
+        public List<Stock>? stocks {get; set;}
+        public List<Specifications>? specifications {get; set;}
+        public ProductImage? productImage {get; set;}
+
+
+
+
+
+
     }
 }

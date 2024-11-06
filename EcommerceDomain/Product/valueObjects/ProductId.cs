@@ -1,10 +1,11 @@
+using System.Net.NetworkInformation;
 using Ecommrce.Domain.Common;
 
 namespace Ecoimmerce.Domian.Product.ValueObjects;
 
 public sealed class ProductId : ValueObject {
 
-    private ProductId(Guid value) {
+    public ProductId(Guid value) {
         if (value == Guid.Empty) {
             throw new ArgumentException("Product id cannot be empty", nameof(value));
         }
@@ -25,7 +26,7 @@ public sealed class ProductId : ValueObject {
 
     public override IEnumerable<object> GetEqualityComponents()
     {
-        throw new NotImplementedException();
+        yield return Value;
     }
 
     public static bool operator ==(ProductId a, ProductId b) => a.Value == b.Value;
@@ -34,3 +35,4 @@ public sealed class ProductId : ValueObject {
 
 
 }
+

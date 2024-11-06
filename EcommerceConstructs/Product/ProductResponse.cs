@@ -1,4 +1,4 @@
-public record ProductResponse (
+public record ProductResponse(
     Guid Id,
     string product_id,
     string name,
@@ -7,9 +7,9 @@ public record ProductResponse (
     string currency,
     List<ProductCategory> product_categories,
     string brand,
-    Stock stock,  
+    Stock stock,
     List<ProductSpecification> product_specifications,
-    ProductRating product_rating,  
+    ProductRating product_rating,
     List<ProductImage> product_images,
     List<RelatedProduct> related_products,
     DateTime created_at,
