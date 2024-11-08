@@ -15,5 +15,6 @@ namespace EcommerceApplication.Interface
         Task<bool> DeleteProductAsync(Guid id);
         Task CreateProductAsync(object name, object price);
         Task GetProductByIdAsync(int id);
+        Task DeleteProductAsync(string name);
     }
 }

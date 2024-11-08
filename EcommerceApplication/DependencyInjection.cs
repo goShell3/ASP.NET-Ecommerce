@@ -11,6 +11,7 @@ namespace Ecommerce.Application
         {
             services.AddScoped<IAuthenticationService, IAuthenticationService>();
             services.AddSingleton<IProductService>();
+            services.AddSingleton<IOrderService>();
             return services;
         }
     }

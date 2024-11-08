@@ -1,12 +1,10 @@
-using Ecoimmerce.Domian.Product.ValueObjects;
-using Ecommerce.Application.Services;
-using Ecommerce.Constructs.Models;
-using Ecommerce.Domain.Entities;
 using EcommerceApplication.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
@@ -43,6 +41,15 @@ namespace Ecommerce.API.Controllers
         //     await _productService.UpdateProductStockAsync(id, request.Stock);
         //     return NoContent();
         // }
+
+        [HttpDelete("{productName}")]
+
+        public async Task<ActionResult> DeleteProductAsync(string name)
+        {
+            await _productService.DeleteProductAsync(name);
+            return NoContent();
+        }
+
     }
 }
 

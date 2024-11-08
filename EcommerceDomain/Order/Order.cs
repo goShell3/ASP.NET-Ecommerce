@@ -1,61 +1,36 @@
-using Ecommerce.Domain.Entities;
+using Ecommerce.Domain.O;
+using EcommerceDomain.Order.Entities;
 
 namespace Ecommerce.Domain.Models
 {
-    public class Order : Entity<Guid>
+    public class Order : Entity<OrderId>
     {
+        public string id {get; set;}
+        public readonly Guid UserId;
+        public readonly OrderId orderId = new OrderId(Guid.NewGuid());
+        public readonly Guid Id;
+
         public string Name { get; private set; }
         public decimal TotalAmount { get; private set; }
-        public List<OrderItem> Items { get; private set; } = new List<OrderItem>();
+        public List<OrderItem>? Items { get; private set; } = new List<OrderItem>();
         public User? User { get; private set; }
 
-        public Order(Guid id, string name, List<OrderItem> items, User user) : base(id)
+        public Order(string id, string name, List<OrderItem> items, User user) : base(new OrderId(Guid.NewGuid()))
+        {
+            this.id = id;
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Order name cannot be null or empty");
             if (items is null || items.Count == 0)
                 throw new ArgumentException("Order items cannot be null or empty");
 
+            UserId = user.Id;
             Name = name;
             Items = items;
             User = user;
 
-            // Associate each item with this order
-            foreach (var item in items)
-            {
-                item.AssignOrder(this);
-            }
-
-            CalculateTotalAmount();
-        }
-
-        private void CalculateTotalAmount()
-        {
-            TotalAmount = 0;
-            foreach (var item in Items)
-            {
-                TotalAmount += item.Product.Price * item.Quantity;
-            }
+            
         }
     }
-
-    public class OrderItem
-    {
-        public required Product Product { get; set; }
-        public int Quantity { get; set; }
-
-        // Optional association back to the Order if needed
-        public Order? Order { get; private set; }
-
-        public OrderItem(Product product, int quantity)
-        {
-            Product = product ?? throw new ArgumentNullException(nameof(product));
-            Quantity = quantity > 0 ? quantity : throw new ArgumentException("Quantity must be greater than zero.");
-        }
-
-        public void AssignOrder(Order order)
-        {
-            Order = order;
-        }
-    }
+}
 }

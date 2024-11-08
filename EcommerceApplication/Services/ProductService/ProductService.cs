@@ -111,5 +111,11 @@ namespace Ecommerce.Application.Services
         {
             throw new NotImplementedException();
         }
+
+
+        Task IProductService.DeleteProductAsync(string name)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -35,6 +35,11 @@ namespace Ecommerce.Infrastructure.Persistence.Repositories
             throw new NotImplementedException();
         }
 
+        public Task GetByNameAsync(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task UpdateAsync(Product product)
         {
             throw new NotImplementedException();

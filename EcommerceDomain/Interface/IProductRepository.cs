@@ -11,5 +11,6 @@ namespace Ecommerce.Application.Interfaces.Repositories
         Task AddAsync(Product product);
         Task UpdateAsync(Product product);
         Task DeleteAsync(Guid id);
+        Task GetByNameAsync(string name);
     }
 }
